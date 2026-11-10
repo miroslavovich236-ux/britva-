@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Барбершоп «Бритва» — мужские стрижки в центре города</title>
+  <meta name="description" content="Мужские стрижки, бритьё и уход за бородой. Онлайн-запись за 1 минуту. Первая стрижка со скидкой 20%.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">БРИТВА<span>.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a href="tel:+79990000000" class="header__phone js-phone">+7 (999) 000-00-00</a>
+      <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== ПЕРВЫЙ ЭКРАН ===== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="hero__tag">Барбершоп в центре города</p>
+      <h1 class="hero__title">Стрижка, после которой<br><span>захочется вернуться</span></h1>
+      <p class="hero__text">Мужские стрижки, бритьё опасной бритвой и уход за бородой. Без очередей — запись на удобное время.</p>
+      <div class="hero__actions">
+        <a href="#booking" class="btn btn--primary">Записаться онлайн</a>
+        <a href="#services" class="btn btn--ghost">Цены</a>
+      </div>
+      <div class="hero__stats">
+        <div><b>7 лет</b><span>работаем</span></div>
+        <div><b>12 000+</b><span>стрижек</span></div>
+        <div><b>4.9 ★</b><span>на Яндекс Картах</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+  <section class="section">
+    <div class="container features">
+      <div class="feature"><div class="feature__icon">✂️</div><h3>Опытные мастера</h3><p>Каждый барбер — от 3 лет практики и регулярное обучение.</p></div>
+      <div class="feature"><div class="feature__icon">⏱</div><h3>Точно по времени</h3><p>Не заставляем ждать. Пришли к 18:00 — сели в кресло в 18:00.</p></div>
+      <div class="feature"><div class="feature__icon">☕</div><h3>Атмосфера</h3><p>Кофе, чай, приставка и хорошая музыка, пока ждёте друга.</p></div>
+      <div class="feature"><div class="feature__icon">💳</div><h3>Удобная оплата</h3><p>Наличные, карты, СБП. Подарочные сертификаты.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== УСЛУГИ И ЦЕНЫ ===== -->
+  <section class="section section--dark" id="services">
+    <div class="container">
+      <h2 class="section__title">Услуги и цены</h2>
+      <div class="prices">
+        <div class="price"><div><h3>Мужская стрижка</h3><p>Мытьё головы, укладка</p></div><b>1 500 ₽</b></div>
+        <div class="price"><div><h3>Стрижка машинкой</h3><p>Одна насадка</p></div><b>900 ₽</b></div>
+        <div class="price"><div><h3>Моделирование бороды</h3><p>Форма, контур, уход</p></div><b>1 000 ₽</b></div>
+        <div class="price"><div><h3>Королевское бритьё</h3><p>Опасная бритва, горячее полотенце</p></div><b>1 300 ₽</b></div>
+        <div class="price price--hit"><div><h3>Стрижка + борода</h3><p>Самый популярный комплекс</p></div><b>2 200 ₽</b></div>
+        <div class="price"><div><h3>Детская стрижка</h3><p>До 12 лет</p></div><b>1 000 ₽</b></div>
+      </div>
+      <p class="prices__note">🎁 Первая стрижка — скидка 20%. Просто скажите, что нашли нас на сайте.</p>
+    </div>
+  </section>
+
+  <!-- ===== МАСТЕРА ===== -->
+  <section class="section" id="masters">
+    <div class="container">
+      <h2 class="section__title">Наши мастера</h2>
+      <div class="masters">
+        <div class="master"><div class="master__photo" style="--h:25">А</div><h3>Алексей</h3><p>Топ-барбер · 8 лет опыта</p></div>
+        <div class="master"><div class="master__photo" style="--h:200">Д</div><h3>Дмитрий</h3><p>Барбер · 5 лет опыта</p></div>
+        <div class="master"><div class="master__photo" style="--h:140">И</div><h3>Игорь</h3><p>Барбер · 3 года опыта</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ОТЗЫВЫ ===== -->
+  <section class="section section--dark" id="reviews">
+    <div class="container">
+      <h2 class="section__title">Отзывы клиентов</h2>
+      <div class="reviews">
+        <blockquote class="review"><p>«Хожу уже второй год только к Алексею. Всегда идеально, ни разу не переделывал.»</p><cite>— Сергей</cite></blockquote>
+        <blockquote class="review"><p>«Записался в 9 вечера на следующий день — всё чётко, без ожидания. Борода как на картинке.»</p><cite>— Максим</cite></blockquote>
+        <blockquote class="review"><p>«Подарил сертификат отцу, теперь ходим вместе. Атмосфера отличная.»</p><cite>— Артём</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ЗАПИСЬ ===== -->
+  <section class="section" id="booking">
+    <div class="container booking">
+      <div>
+        <h2 class="section__title section__title--left">Запишитесь<br>за 1 минуту</h2>
+        <p class="booking__text">Оставьте имя и телефон — администратор перезвонит и подберёт удобное время. Или напишите нам сразу в мессенджер.</p>
+        <div class="booking__messengers">
+          <a class="btn btn--ghost js-telegram" href="#" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost js-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <form class="form" id="form">
+        <label>Ваше имя<input type="text" name="name" required placeholder="Иван"></label>
+        <label>Телефон<input type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
+        <label>Услуга
+          <select name="service">
+            <option>Мужская стрижка</option>
+            <option>Стрижка + борода</option>
+            <option>Моделирование бороды</option>
+            <option>Королевское бритьё</option>
+            <option>Другое</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn--primary btn--full">Записаться</button>
+        <p class="form__hint">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        <p class="form__success" id="formSuccess" hidden>✅ Спасибо! Мы скоро свяжемся с вами.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== КОНТАКТЫ ===== -->
+  <section class="section section--dark" id="contacts">
+    <div class="container contacts">
+      <div>
+        <h2 class="section__title section__title--left">Контакты</h2>
+        <ul class="contacts__list">
+          <li><b>Адрес:</b> ул. Ленина, 10 (вход со двора)</li>
+          <li><b>Телефон:</b> <a href="tel:+79990000000" class="js-phone">+7 (999) 000-00-00</a></li>
+          <li><b>Режим работы:</b> ежедневно 10:00 – 22:00</li>
+        </ul>
+      </div>
+      <!-- Сюда вставляется карта из конструктора Яндекс Карт: yandex.ru/map-constructor -->
+      <div class="map">📍 Здесь будет карта<br><small>Вставьте код из конструктора Яндекс Карт</small></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Барбершоп «Бритва». Все права защищены.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
