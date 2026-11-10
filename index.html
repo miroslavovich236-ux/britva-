@@ -13,17 +13,19 @@
 <body>
 
   <!-- ===== ШАПКА ===== -->
-  <header class="header" id="header">
+  <header class="header">
     <div class="container header__inner">
       <a href="#" class="logo">БРИТВА<span>.</span></a>
-      <nav class="nav" id="nav">
+      <!-- Мобильное меню на чистом CSS: чекбокс + label -->
+      <input type="checkbox" id="menu" class="menu-toggle">
+      <label for="menu" class="burger" aria-label="Открыть меню"><span></span><span></span><span></span></label>
+      <nav class="nav">
         <a href="#services">Услуги</a>
         <a href="#masters">Мастера</a>
         <a href="#reviews">Отзывы</a>
         <a href="#contacts">Контакты</a>
       </nav>
-      <a href="tel:+79990000000" class="header__phone js-phone">+7 (999) 000-00-00</a>
-      <button class="burger" id="burger" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      <a href="tel:+79990000000" class="header__phone">+7 (999) 000-00-00</a>
     </div>
   </header>
 
@@ -102,11 +104,14 @@
         <h2 class="section__title section__title--left">Запишитесь<br>за 1 минуту</h2>
         <p class="booking__text">Оставьте имя и телефон — администратор перезвонит и подберёт удобное время. Или напишите нам сразу в мессенджер.</p>
         <div class="booking__messengers">
-          <a class="btn btn--ghost js-telegram" href="#" target="_blank" rel="noopener">Telegram</a>
-          <a class="btn btn--ghost js-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--ghost" href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost" href="https://wa.me/79990000000" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
-      <form class="form" id="form">
+      <!-- Заявки приходят на почту через formsubmit.co: замените email на почту клиента -->
+      <form class="form" action="https://formsubmit.co/your@email.ru" method="POST">
+        <input type="hidden" name="_subject" value="Новая заявка с сайта">
+        <input type="hidden" name="_captcha" value="false">
         <label>Ваше имя<input type="text" name="name" required placeholder="Иван"></label>
         <label>Телефон<input type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
         <label>Услуга
@@ -120,7 +125,6 @@
         </label>
         <button type="submit" class="btn btn--primary btn--full">Записаться</button>
         <p class="form__hint">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
-        <p class="form__success" id="formSuccess" hidden>✅ Спасибо! Мы скоро свяжемся с вами.</p>
       </form>
     </div>
   </section>
@@ -132,7 +136,7 @@
         <h2 class="section__title section__title--left">Контакты</h2>
         <ul class="contacts__list">
           <li><b>Адрес:</b> ул. Ленина, 10 (вход со двора)</li>
-          <li><b>Телефон:</b> <a href="tel:+79990000000" class="js-phone">+7 (999) 000-00-00</a></li>
+          <li><b>Телефон:</b> <a href="tel:+79990000000">+7 (999) 000-00-00</a></li>
           <li><b>Режим работы:</b> ежедневно 10:00 – 22:00</li>
         </ul>
       </div>
@@ -142,9 +146,8 @@
   </section>
 
   <footer class="footer">
-    <div class="container">© <span id="year"></span> Барбершоп «Бритва». Все права защищены.</div>
+    <div class="container">© 2026 Барбершоп «Бритва». Все права защищены.</div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>

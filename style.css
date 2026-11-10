@@ -26,8 +26,7 @@ h1, h2, h3, .logo { font-family: 'Oswald', sans-serif; text-transform: uppercase
 .btn--full { width: 100%; }
 
 /* ===== Шапка ===== */
-.header { position: fixed; inset: 0 0 auto 0; z-index: 10; transition: .3s; }
-.header.scrolled { background: rgba(17,17,17,.95); backdrop-filter: blur(8px); box-shadow: 0 2px 20px rgba(0,0,0,.4); }
+.header { position: fixed; inset: 0 0 auto 0; z-index: 10; background: rgba(17,17,17,.9); backdrop-filter: blur(8px); border-bottom: 1px solid #222; }
 .header__inner { display: flex; align-items: center; gap: 32px; height: 72px; }
 .logo { font-size: 26px; font-weight: 700; }
 .logo span { color: var(--accent); }
@@ -35,7 +34,8 @@ h1, h2, h3, .logo { font-family: 'Oswald', sans-serif; text-transform: uppercase
 .nav a { color: var(--muted); transition: .2s; }
 .nav a:hover { color: var(--accent); }
 .header__phone { font-weight: 600; }
-.burger { display: none; background: none; border: 0; cursor: pointer; flex-direction: column; gap: 5px; }
+.menu-toggle { display: none; }
+.burger { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px 0; }
 .burger span { width: 26px; height: 2px; background: var(--text); }
 
 /* ===== Первый экран ===== */
@@ -99,7 +99,6 @@ h1, h2, h3, .logo { font-family: 'Oswald', sans-serif; text-transform: uppercase
 .form input, .form select { padding: 14px 16px; border-radius: 10px; border: 1px solid #333; background: var(--bg); color: var(--text); font: inherit; }
 .form input:focus, .form select:focus { outline: none; border-color: var(--accent); }
 .form__hint { font-size: 12px; color: var(--muted); text-align: center; }
-.form__success { text-align: center; color: var(--accent); font-weight: 600; }
 
 .contacts { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: center; }
 .contacts__list { list-style: none; display: grid; gap: 14px; font-size: 17px; }
@@ -109,9 +108,13 @@ h1, h2, h3, .logo { font-family: 'Oswald', sans-serif; text-transform: uppercase
 
 .footer { padding: 28px 0; text-align: center; color: var(--muted); font-size: 14px; border-top: 1px solid #222; }
 
-/* ===== Анимация появления ===== */
-.reveal { opacity: 0; transform: translateY(30px); transition: .7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+/* ===== Анимация появления первого экрана (чистый CSS) ===== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+.hero__inner > * { animation: fadeUp .8s ease both; }
+.hero__inner > *:nth-child(2) { animation-delay: .15s; }
+.hero__inner > *:nth-child(3) { animation-delay: .3s; }
+.hero__inner > *:nth-child(4) { animation-delay: .45s; }
+.hero__inner > *:nth-child(5) { animation-delay: .6s; }
 
 /* ===== Адаптив (телефоны и планшеты) ===== */
 @media (max-width: 900px) {
@@ -121,7 +124,7 @@ h1, h2, h3, .logo { font-family: 'Oswald', sans-serif; text-transform: uppercase
   .header__phone { display: none; }
   .burger { display: flex; margin-left: auto; }
   .nav { position: fixed; top: 72px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--bg); padding: 8px 16px 16px; transform: translateY(-150%); transition: .3s; }
-  .nav.open { transform: none; }
+  .menu-toggle:checked ~ .nav { transform: none; }
   .nav a { padding: 14px 0; border-bottom: 1px solid #222; }
 }
 @media (max-width: 560px) {
