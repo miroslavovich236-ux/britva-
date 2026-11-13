@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AERIS H7</title>
+  <meta name="description" content="Интерактивная 3D-презентация вертолёта: прокрутите страницу, и вертолёт развернётся к каждому узлу.">
+  <meta name="theme-color" content="#060a10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Onest:wght@400;500;600&family=Tektur:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <svg id="leaders" aria-hidden="true"></svg>
+  <div id="callouts" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" id="brand" href="#">AERIS<span>H7</span></a>
+    <div class="hud" aria-hidden="true">
+      <span id="hdg">HDG 000°</span>
+      <span id="stepno">Обзор</span>
+    </div>
+  </header>
+
+  <div class="hero" id="hero-copy">
+    <p class="eyebrow" id="hero-eyebrow"></p>
+    <h1 class="hero__title" id="hero-title"></h1>
+    <p class="hero__text" id="hero-text"></p>
+  </div>
+  <div class="cue" id="cue" aria-hidden="true"><span id="cue-text"></span><i></i></div>
+
+  <div class="overview" id="overview-copy" aria-hidden="true">
+    <p class="eyebrow" id="ov-eyebrow"></p>
+    <p class="overview__title" id="ov-title"></p>
+  </div>
+  <ol class="legend" id="ov-legend" aria-hidden="true"></ol>
+
+  <aside class="specs" id="specs">
+    <p class="eyebrow" id="specs-eyebrow"></p>
+    <h2 class="specs__title" id="specs-title"></h2>
+    <dl class="specs__grid" id="specs-grid"></dl>
+    <button type="button" class="specs__btn" id="specs-restart"><span aria-hidden="true">↑</span><span></span></button>
+    <p class="specs__note" id="specs-note"></p>
+  </aside>
+
+  <footer class="dock">
+    <nav class="parts" id="parts" aria-label="Узлы вертолёта"></nav>
+    <div class="progress" aria-hidden="true"><i id="progress-fill"></i></div>
+  </footer>
+
+  <main class="track" id="track"></main>
+
+  <div class="fallback">
+    <p>Для 3D-модели нужен браузер с поддержкой WebGL и включённым JavaScript.</p>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
